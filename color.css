@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#3f87a6 10%, #ebf8e1a2 10%),
+    linear-gradient(to right, #ebf8e100 10%, #c73030 10% 10.2%, #ebf8e100 10.5%);
+  background-size: 100% 25px, 100% 100%;
+  background-repeat: repeat, no-repeat;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #3f87a6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.title {
+  text-decoration: underline wavy #fff;
+}
+
+#colorBox {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 3px solid #000;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.options button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.options button:hover {
+  transform: scale(1.1);
+}
+
+#newGameButton {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.candi-button {
+  --button_radius: 0.75em;
+  --button_color: red;
+  --button_outline_color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.candi-button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+.candi-button:active .button_top {
+  transform: translateY(0);
+}
+
+.correct {
+  animation: pop 0.5s ease-in-out;
+}
+
+.wrong {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
